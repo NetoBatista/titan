@@ -1,0 +1,48 @@
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Senha123!
+      POSTGRES_DB: titan
+    ports:
+      - "54321:5432"
+    networks:
+      - titan_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    environment:
+      - CONNECTION_STRING=Host=postgres;Database=titan;Username=postgres;Password=Senha123!
+    ports:
+      - "8001:8080"
+    networks:
+      - titan_network
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+      args:
+        URL_API: http://localhost:8001/api
+    ports:
+      - "8000:80"
+    networks:
+      - titan_network
+    depends_on:
+      - server
+      - postgres
+
+networks:
+  titan_network:
+    driver: bridge

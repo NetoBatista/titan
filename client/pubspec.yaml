@@ -1,0 +1,28 @@
+name: titan
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.4.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations: 
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+    
+  flutter_modular: ^6.3.4
+  http: ^1.2.2
+  localization: ^2.1.1
+
+dev_dependencies:
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - lib/i18n/

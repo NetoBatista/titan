@@ -1,0 +1,57 @@
+{
+    "default": {
+        "required-field": "Campo obrigatório"
+    },
+    "header": {
+        "button": {
+            "home": "Início",
+            "events": "Eventos"
+        }
+    },
+    "home-component": {
+        "table": {
+            "header": {
+                "name": "Nome",
+                "url": "Url",
+                "status": "Status",
+                "date": "Data"
+            }
+        }
+    },
+    "execution-step": {
+        "created": "Criado",
+        "inProgress": "Em progresso",
+        "fail": "Falha",
+        "success": "Sucesso"
+    },
+    "event": {
+        "button": {
+            "search": "Pesquisar",
+            "new-event": "Novo evento"
+        },
+        "dialog": {
+            "title": {
+                "new": "Criar evento",
+                "edit": "Editar evento",
+                "remove": "Remover evento"
+            },
+            "action-button": {
+                "confirm": "Confirmar",
+                "cancel": "Cancelar"
+            },
+            "input": {
+                "name": "Nome",
+                "url": "Url",
+                "interval-in-seconds": "Intervalo (Em segundos)",
+                "select-method": "Selecione o método"
+            },
+            "remove-description": "Tem certeza que deseja remover esse evento? Essa ação não é reversível e irá apagar todos os dados"
+        },
+        "item": {
+            "button": {
+                "remove": "Remover",
+                "edit": "Editar"
+            }
+        }
+    }
+}
