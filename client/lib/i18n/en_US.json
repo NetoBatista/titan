@@ -1,8 +1,57 @@
 {
+    "default": {
+        "required-field": "Required field"
+    },
     "header": {
         "button": {
             "home": "Home",
             "events": "Events"
+        }
+    },
+    "home-component": {
+        "table": {
+            "header": {
+                "name": "Name",
+                "url": "URL",
+                "status": "Status",
+                "date": "Date"
+            }
+        }
+    },
+    "execution-step": {
+        "created": "Created",
+        "inProgress": "In progress",
+        "fail": "Fail",
+        "success": "Success"
+    },
+    "event": {
+        "button": {
+            "search": "Search",
+            "new-event": "New event"
+        },
+        "dialog": {
+            "title": {
+                "new": "Create event",
+                "edit": "Edit event",
+                "remove": "Remove event"
+            },
+            "action-button": {
+                "confirm": "Confirm",
+                "cancel": "Cancel"
+            },
+            "input": {
+                "name": "Name",
+                "url": "URL",
+                "interval-in-seconds": "Interval (In seconds)",
+                "select-method": "Select method"
+            },
+            "remove-description": "Are you sure you want to remove this event? This action is irreversible and will delete all data."
+        },
+        "item": {
+            "button": {
+                "remove": "Remove",
+                "edit": "Edit"
+            }
         }
     }
 }
