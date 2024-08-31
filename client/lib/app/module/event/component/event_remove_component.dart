@@ -79,7 +79,7 @@ class _EventRemoveComponentState extends State<EventRemoveComponent> {
             inputFormatters: [
               FilteringTextInputFormatter.digitsOnly,
             ],
-            maxLength: 4,
+            maxLength: 10,
             validator: FormValidator.requiredField,
             onChanged: (String value) {
               request.interval = int.tryParse(value) ?? 0;
